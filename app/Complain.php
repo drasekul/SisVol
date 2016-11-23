@@ -10,6 +10,8 @@ class Complain extends Model
     protected $primaryKey = "ID_COMPLAIN";
     protected $table = "COMPLAIN";
     protected $fillable = [
+      'ID_TASK',
+      'ID_USER_ROLE',
       'DETAIL_COMPLAIN',
       'SEVERITY_COMPLAIN'
     ];

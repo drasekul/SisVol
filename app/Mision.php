@@ -12,9 +12,13 @@ class Mision extends Model
    protected $primaryKey = "ID_MISION";
    protected $table = "MISION";
    protected $fillable = [
+     'ID_EMERGENCY',
+     'ID_USER_ROLE',
      'ACTUALCAPACITY_MISION',
      'MAXCAPACITY_MISION',
      'NAME_MISION',
+     'INITIALDATE_MISION',
+     'FINALDATE_MISION',
      'CONDITION_MISION'
    ];
 }

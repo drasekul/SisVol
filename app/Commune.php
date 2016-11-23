@@ -10,6 +10,7 @@ class Commune extends Model
     protected $primaryKey = "ID_COMMUNE";
     protected $table = "COMMUNE";
     protected $fillable = [
+      'ID_PROVINCE'
       'NAME_COMMUNE'
     ];
 }

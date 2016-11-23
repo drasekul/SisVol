@@ -11,6 +11,7 @@ class Province extends Model
     protected $primaryKey = "ID_PROVINCE";
     protected $table = "PROVINCE";
     protected $fillable = [
+      'ID_REGION',
       'NAME_PROVINCE'
     ];
 }

@@ -12,7 +12,10 @@ class Task extends Model
     protected $primaryKey = "ID_TASK";
     protected $table = "TASK";
     protected $fillable = [
+      'ID_MISION',
       'NAME_TASK',
+      'STARTDATE_TASK',
+      'ENDDATE_TASK',
       'CONDITION_TASK'
     ];
 }
