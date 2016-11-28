@@ -7,9 +7,9 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="icon" href="http://getbootstrap.com/favicon.ico">
+    <link rel="icon" href="favicon.ico">
 
-    <title>Dashboard Template for Bootstrap</title>
+    <title>SisVol-Sistema de Gestión de Voluntariado</title>
 
     <!-- Bootstrap core CSS -->
     <link href="/css/bootstrap.min.css" rel="stylesheet">
@@ -47,14 +47,14 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="http://getbootstrap.com/examples/dashboard/#">Project name</a>
+          <a class="navbar-brand" href="/">SisVol</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="http://getbootstrap.com/examples/dashboard/#">Dashboard</a></li>
-            <li><a href="http://getbootstrap.com/examples/dashboard/#">Settings</a></li>
-            <li><a href="http://getbootstrap.com/examples/dashboard/#">Profile</a></li>
-            <li><a href="http://getbootstrap.com/examples/dashboard/#">Help</a></li>
+            <li><a href="/dashboard">Dashboard</a></li>
+            <li><a href="/settings">Configuraciones</a></li>
+            <li><a href="/profile">Perfil</a></li>
+            <li><a href="/help">Ayuda</a></li>
           </ul>
           <form class="navbar-form navbar-right">
             <input type="text" class="form-control" placeholder="Search...">
@@ -67,27 +67,28 @@
       <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
-            <li class="active"><a href="http://getbootstrap.com/examples/dashboard/#">Overview <span class="sr-only">(current)</span></a></li>
-            <li><a href="http://getbootstrap.com/examples/dashboard/#">Reports</a></li>
-            <li><a href="http://getbootstrap.com/examples/dashboard/#">Analytics</a></li>
-            <li><a href="http://getbootstrap.com/examples/dashboard/#">Export</a></li>
+            <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
+            <li><a href="#">Reports</a></li>
+            <li><a href="#">Analytics</a></li>
+            <li><a href="#">Export</a></li>
           </ul>
           <ul class="nav nav-sidebar">
-            <li><a href="http://getbootstrap.com/examples/dashboard/">Nav item</a></li>
-            <li><a href="http://getbootstrap.com/examples/dashboard/">Nav item again</a></li>
-            <li><a href="http://getbootstrap.com/examples/dashboard/">One more nav</a></li>
-            <li><a href="http://getbootstrap.com/examples/dashboard/">Another nav item</a></li>
-            <li><a href="http://getbootstrap.com/examples/dashboard/">More navigation</a></li>
+            <li><a href="#">Nav item</a></li>
+            <li><a href="#">Nav item again</a></li>
+            <li><a href="#">One more nav</a></li>
+            <li><a href="#">Another nav item</a></li>
+            <li><a href="#">More navigation</a></li>
           </ul>
           <ul class="nav nav-sidebar">
-            <li><a href="http://getbootstrap.com/examples/dashboard/">Nav item again</a></li>
-            <li><a href="http://getbootstrap.com/examples/dashboard/">One more nav</a></li>
-            <li><a href="http://getbootstrap.com/examples/dashboard/">Another nav item</a></li>
+            <li><a href="#">Nav item again</a></li>
+            <li><a href="#">One more nav</a></li>
+            <li><a href="#">Another nav item</a></li>
           </ul>
         </div>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
           <h1 class="page-header">Dashboard</h1>
           @yield('content')
+          <h2>Esto es una puta prueba para ver esta wea</h2>
         </div>
       </div>
     </div>
