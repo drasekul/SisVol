@@ -53,7 +53,7 @@
           <ul class="nav navbar-nav navbar-right">
             <li><a href="/dashboard">Dashboard</a></li>
             <li><a href="/settings">Configuraciones</a></li>
-            <li><a href="/profile">Perfil</a></li>
+            <li><a href="/login">Login</a></li>
             <li><a href="/help">Ayuda</a></li>
           </ul>
           <form class="navbar-form navbar-right">
@@ -88,7 +88,6 @@
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
           <h1 class="page-header">Dashboard</h1>
           @yield('content')
-          <h2>Esto es una puta prueba para ver esta wea</h2>
         </div>
       </div>
     </div>
