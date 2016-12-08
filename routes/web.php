@@ -15,9 +15,7 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/1', 'HomeController@home');
-
-Route::get('/prueba', 'AbilityController@mostar');
+Route::get('/test', 'TestController@index');
 
 Route::get('/login', function(){
     return view('login');

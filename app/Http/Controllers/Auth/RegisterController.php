@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Auth;
 
+use DB;
 use App\User;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
@@ -49,9 +50,15 @@ class RegisterController extends Controller
     {
       //dd('hola');
         return Validator::make($data, [
-            'name' => 'required|max:255',
-            'email' => 'required|email|max:255|unique:USER',
-            'password' => 'required|min:6|confirmed',
+            'ID_COMMUNE' => 'required',
+            'USERNAME' => 'required|max:25|unique:USER',
+            'PASSWORD' => 'required|min:6|confirmed',
+            'FIRSTNAME' => 'required|max:50',
+            'LASTNAME' => 'required|max:50',
+            'RUT' => 'required|max:10',
+            'EMAIL' => 'required|email|max:255',
+            'PHONE' => 'required|max:15'
+
         ]);
     }
 
@@ -64,9 +71,25 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => bcrypt($data['password']),
+            'ID_COMMUNE' => $data['ID_COMMUNE'],
+            'USERNAME' => $data['USERNAME'],
+            'PASSWORD' => $data['PASSWORD'],
+            'FIRSTNAME' => $data['FIRSTNAME'],
+            'LASTNAME' => $data['LASTNAME'],
+            'RUT' => $data['RUT'],
+            'EMAIL' => $data['EMAIL'],
+            'PHONE' => $data['PHONE']
         ]);
+    }
+
+    public function showRegistrationForm()
+    {
+      $comunas = DB::select('select C.ID_COMMUNE, C.NAME_COMMUNE from COMMUNE C inner join PROVINCE P on (C.ID_PROVINCE = P.ID_PROVINCE) inner join REGION R on (P.ID_REGION = R.ID_REGION) order by R.ID_REGION, C.NAME_COMMUNE;');
+      //dd($Comunas);
+      $test = [];
+      foreach ($comunas as $comuna) {
+          $test[$comuna->ID_COMMUNE] = $comuna->NAME_COMMUNE;
+      }
+      return view('auth.register')->with('comunas', $test);
     }
 }
