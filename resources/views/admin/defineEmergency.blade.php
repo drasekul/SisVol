@@ -29,7 +29,7 @@
               <div style="height:20px"></div>	       
           <div class="panel panel-default">
                         <div class="panel-heading">
-                            Designar Emergencia
+                            Definir Emergencia
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
