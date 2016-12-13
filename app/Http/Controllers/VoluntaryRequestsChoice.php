@@ -5,10 +5,10 @@ namespace App\Http\Controllers;
 use DB;
 use Illuminate\Http\Request;
 
-class AddMissions extends Controller
+class VoluntaryRequestsChoice extends Controller
 {
     public function index(){
-      return view('admin/addMissions');
+      return view('EmergencyAttendant/voluntaryRequestsChoice');
     }
 
 }

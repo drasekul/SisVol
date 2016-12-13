@@ -5,11 +5,10 @@ namespace App\Http\Controllers;
 use DB;
 use Illuminate\Http\Request;
 
-class AbilityController extends Controller
+class PersonalData extends Controller
 {
-    public function mostar(){
-      $Habilidades = DB::select('select NAME_ABILITY from ABILITY;');
-      return ['Habilidades' => $Habilidades];
+    public function index(){
+      return view('Voluntary/personalData');
     }
-    
+
 }

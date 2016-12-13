@@ -14,11 +14,17 @@
 Route::get('/', function () {
     return view('home');
 });
-
 Route::get('/test', 'TestController@index');
-
-
-
-  Auth::routes();
-
 Route::get('/home', 'HomeController@index');
+Route::get('/actualInfoMission/index','ActualInfoMission@index');
+Route::get('/actualTask/index','ActualTask@index');
+Route::get('/addExtraVolunteers/index','AddExtraVolunteers@index');
+Route::get('/addMissions/index','AddMissions@index');
+Route::get('/defineEmergency/index','DefineEmergency@index');
+Route::get('/emergencyManagement/index','EmergencyManagement@index');
+Route::get('/infoOnAbilities/index','InfoOnAbilities@index');
+Route::get('/personalData/index','PersonalData@index');
+Route::get('/taskAssignment/index','TaskAssignment@index');
+Route::get('/taskRequests/index','TaskRequests@index');
+Route::get('/taskStatus/index','TaskStatus@index');
+Route::get('/voluntaryRequestsChoice/index','VoluntaryRequestsChoice@index');
