@@ -25,7 +25,8 @@ class User extends Authenticatable
         'PHONE',
         'FIRSTNAME',
         'LASTNAME',
-        'RUT'
+        'RUT',
+        'remember_token'
     ];
 
     /**
