@@ -9,13 +9,13 @@
 			<a href="datos_personales.html"><i class="fa fa-user fa-2x fa-fw"></i> Datos Personales</a>
              </li>
 			<li>
-             <a href="datos_personales.html"><i class="fa fa-book fa-2x fa-fw"></i> Definir Emergencia</a>
+             <a href="/defineEmergency/index"><i class="fa fa-book fa-2x fa-fw"></i> Definir Emergencia</a>
             </li>
             <li>
-            <a href="gestionar_reclamos.html"><i class="fa fa-book fa-2x fa-fw"></i>Gestion Agregar Misiones</a>                          
+            <a href="/addMissions/index"><i class="fa fa-book fa-2x fa-fw"></i>Gestion Agregar Misiones</a>                          
             </li>
 			<li>
-            <a href="gestionar_reclamos.html"><i class="fa fa-book fa-2x fa-fw"></i>Gestion Emergencia</a>                          
+            <a href="/emergencyManagement/index"><i class="fa fa-book fa-2x fa-fw"></i>Gestion Emergencia</a>                          
             </li>
           </ul>
             <div style="text-align:center;height:30px;margin: 10px">
@@ -36,69 +36,71 @@
                             <div class="table-responsive table-bordered">
                                 <table class="table">
                                     <tbody>
-                                        <form>
+					{{ csrf_field() }}
+					{{ Form::open(array('action' => array('DefineEmergency@regEmer'))) }}
+					
+					
                                         <tr>
                                             <td><b>Nombre designado:</b></td>
-                                            <td><input type="text" name="txtusu"></td>
+                                            <td>{{Form::text('name')}}</td>
                                         </tr>
                                          <tr>
                                             <td><b>Region:</b></td>
                                             <td>
-                                            <select class="form-control" name="ddlRegionSel">
-                                                    <option value="Sin valor">Metropolitana</option>
-                                                    <option value="Otro valor">Otro valor</option>
-                                            </select>
+                                            	{{Form::select('region', $regiones)}}
                                             </td>
                                         </tr>
                                          <tr>
                                             <td><b>Provincia:</b></td>
                                             <td>
-                                            <select class="form-control" name="ddlProvinciaSel">
-                                                    <option value="Sin valor">Santiago</option>
-                                                    <option value="Otro valor">Otro valor</option>
-                                            </select>
-                                            </td>
-                                        </tr>
-                                         <tr>
-                                            <td><b>Ciudad/Pueblo:</b></td>
-                                            <td>
-                                            <select class="form-control" name="ddlCiudadPuebloSel">
-                                                    <option value="Sin valor">Santiago</option>
-                                                    <option value="Otro valor">Otro valor</option>
-                                            </select>
+                                            	{{Form::select('provincia', $provincias)}}
                                             </td>
                                         </tr>
                                         <tr>
                                             <td><b>Comuna:</b></td>
-											 <td>
-                                            <select class="form-control" name="ddlComunaSel">
-                                                    <option value="Sin valor">Santiago</option>
-                                                    <option value="Otro valor">Otro valor</option>
-                                            </select>
+					    <td>
+						{{Form::select('comuna', $comunas)}}
                                             </td>
+					</tr>
+										<tr>
+                                            <td><b>Descripción:</b></td>
+                                            <td>{{ Form::text('descripcion')}}</td>
+                                        </tr>
                                         </tr>
 										<tr>
                                             <td><b>Referencia Geografica:</b></td>
-                                            <td><input type="text" name="txtusu"></td>
+                                            <td>{{ Form::text('geo')}}</td>
                                         </tr>
 										<tr>
                                             <td><b>Fecha:</b></td>
-                                            <td><input type="date" name="txtusu"></td>
+                                            <td>{{Form::date('date', \Carbon\Carbon::now())}}</td>
                                         </tr>
+										<tr>
+                                            <td><b>Estado:</b></td>
+											 <td>
+                                            {{Form::select('estado', array(
+						'1' => 'En Proceso',
+ 						'2' => 'Completado',
+ 						'3' => 'Abandonado',))}}
+                                            </td>
+                                        </tr>
+					</tr>
 										<tr>
                                             <td><b>Gravedad:</b></td>
 											 <td>
-                                            <select class="form-control" name="ddlGravedadSel">
-                                                    <option value="Sin valor">Leve</option>
-                                                    <option value="Otro valor">Otro valor</option>
-                                            </select>
+                                            {{Form::select('prioridad', array(
+						'1' => 'Mínima',
+ 						'2' => 'Baja',
+ 						'3' => 'Moderada',
+ 						'4' => 'Alta',
+ 						'5' => 'Catastrofica'))}}
                                             </td>
                                         </tr>
                                         <tr>
                                             <td></td>
-                                            <td><button type="button" class="btn btn-warning">Registrar</button></td>
+                                            <td>{{Form::submit('Registrar',['class'=>"btn btn-warning"])}}</td>
                                         </tr>
-                                        </form>
+					{{ Form::close() }}
                                     </tbody>
                                 </table>
                             </div>
