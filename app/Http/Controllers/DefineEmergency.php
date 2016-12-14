@@ -8,16 +8,16 @@ use Illuminate\Http\Request;
 class DefineEmergency extends Controller
 {
     public function index(){
-	//$regiones = DB::select('select R.ID_REGION, R.NAME_REGION from REGION R ORDER BY R.NAME_REGION;');
-	$regiones = DB::select('select R.ID_EMERGENCY, R.NAME_EMERGENCY,R.DATEDECLARED_EMERGENCY,R.ID_COMMUNE from EMERGENCY R ORDER BY R.NAME_EMERGENCY;');
+	$regiones = DB::select('select R.ID_REGION, R.NAME_REGION from REGION R ORDER BY R.NAME_REGION;');
+	//$regiones = DB::select('select R.ID_EMERGENCY, R.NAME_EMERGENCY,R.DATEDECLARED_EMERGENCY,R.ID_COMMUNE from EMERGENCY R ORDER BY R.NAME_EMERGENCY;');
 	$provincias = DB::select('select P.ID_PROVINCE, P.NAME_PROVINCE from PROVINCE P ORDER BY P.NAME_PROVINCE;');
 	$comunas = DB::select('select C.ID_COMMUNE, C.NAME_COMMUNE from COMMUNE C ORDER BY C.NAME_COMMUNE;');
     	$result1 = [];
 	$result2 = [];
 	$result3 = [];
     	foreach ($regiones as $region) {
-        	//$result1[$region->ID_REGION] = $region->NAME_REGION;
-		$result1[$region->ID_EMERGENCY] = $region->NAME_EMERGENCY;
+        	$result1[$region->ID_REGION] = $region->NAME_REGION;
+		//$result1[$region->ID_EMERGENCY] = $region->NAME_EMERGENCY;
     	}
 	foreach ($provincias as $provincia) {
         	$result2[$provincia->ID_PROVINCE] = $provincia->NAME_PROVINCE;
