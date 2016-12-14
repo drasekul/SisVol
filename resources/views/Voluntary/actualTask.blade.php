@@ -4,18 +4,15 @@
       <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
-           <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
-            <li>
-			<a href="datos_personales.html"><i class="fa fa-user fa-2x fa-fw"></i> Tarea Actual</a>
-             </li>
-			<li>
-             <a href="datos_personales.html"><i class="fa fa-book fa-2x fa-fw"></i> Solicitudes Tareas</a>
+           <li class="active"><a href="/actualTask/index">Tarea Actual<span class="sr-only">(current)</span></a></li>
+			      <li>
+             <a href="/taskRequests/index"><i class="fa fa-book fa-2x fa-fw"></i> Solicitudes Tareas</a>
             </li>
             <li>
-            <a href="gestionar_reclamos.html"><i class="fa fa-book fa-2x fa-fw"></i>Gestion Habilidades</a>                          
+            <a href="/infoOnAbilities/index"><i class="fa fa-book fa-2x fa-fw"></i>Gestion Habilidades</a>
             </li>
 			<li>
-            <a href="gestionar_reclamos.html"><i class="fa fa-book fa-2x fa-fw"></i>Datos Personales</a>                          
+            <a href="/personalData/index"><i class="fa fa-book fa-2x fa-fw"></i>Datos Personales</a>
             </li>
           </ul>
             <div style="text-align:center;height:30px;margin: 10px">
@@ -25,8 +22,8 @@
                     </div>
                     <button type="button" class="btn btn-success btn-lg btn-block">Cerrar Sesión</button>
         </div>
-        <div class="col-sm-offset-2 .col-sm-6  main">    
-              <div style="height:25px"></div>		
+        <div class="col-sm-offset-2 .col-sm-6  main">
+              <div style="height:25px"></div>
                <div class="panel panel-default">
                         <div class="panel-heading">
                             Tarea actual
@@ -46,48 +43,48 @@
                                         <div class="col-sm-4">
 										      <td><b>Guia de Actividad</b></td>
                                              <td><INPUT button type="button" value="Detalle" class="btn btn-danger btn-lg"></td>
-										
+
 										</div>
-                                            
+
                                 </tr>
 								<tr>
 										<div class="col-xs-1">
 										    <td>Fecha de inicio:</td>
 										   <td>
-												<div class="col-md-20">											
+												<div class="col-md-20">
 													<input class="form-control" type="text" readonly="true">
 												</div>
                                             </td>
 										</div>
                                         <div class="col-sm-4">
 										      <td><b>Fecha finalizada: </b></td>
-                                             <td>											 
-												<div class="col-md-20">											
+                                             <td>
+												<div class="col-md-20">
 													<input class="form-control" type="text" readonly="true">
-												</div>                                            
+												</div>
                                             </td>
-										
+
 										</div>
-                                            
+
                                 </tr>
 								<div class="col-md-offset-3 col-md-6">
 										<div class="text-center">Estado actual: <input type="checkbox" checked data-toggle="toggle"></div>
-										
+
 								</div>
 								<table class="table table-bordered">
 							   	<div class="col-md-offset-3">
 								 <td><b>Descripción del Problema:<br> (150 carácteres máximo)</b></td>
-                                   <td><textarea name="dscProblema" style="height:100px; width:600px"></textarea></td>		
-								
+                                   <td><textarea name="dscProblema" style="height:100px; width:600px"></textarea></td>
+
 								</div>
-								
-								
+
+
 								</table>
-								
-														
-								
-                                 
-                                    
+
+
+
+
+
                                 </table>
                             </div>
 							<div class="col-sm-offset-5 main"> <INPUT button type="button" value="Actualizar" class="btn btn-primary btn-lg"></button></div>

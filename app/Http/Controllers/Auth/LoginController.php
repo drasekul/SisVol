@@ -1,7 +1,6 @@
 <?php
 
 namespace App\Http\Controllers\Auth;
-
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
@@ -36,4 +35,19 @@ class LoginController extends Controller
     {
         $this->middleware('guest', ['except' => 'logout']);
     }
+
+    public function username()
+    {
+        return 'USERNAME';
+    }
+
+    public function showLogin(){
+      return view('auth.login');
+    }
+
+    public function iniciar(REQUEST $request){
+      $user = App\USER::where('USERNAME', $request->USERNAME)->where('PASSWORD', $request->PASSWORD)->first;
+      Auth::login($user);
+    }
+
 }

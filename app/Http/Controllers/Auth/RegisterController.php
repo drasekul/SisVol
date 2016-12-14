@@ -73,12 +73,13 @@ class RegisterController extends Controller
         return User::create([
             'ID_COMMUNE' => $data['ID_COMMUNE'],
             'USERNAME' => $data['USERNAME'],
-            'PASSWORD' => $data['PASSWORD'],
+            'PASSWORD' => bcrypt($data['PASSWORD']),
             'FIRSTNAME' => $data['FIRSTNAME'],
             'LASTNAME' => $data['LASTNAME'],
             'RUT' => $data['RUT'],
             'EMAIL' => $data['EMAIL'],
-            'PHONE' => $data['PHONE']
+            'PHONE' => $data['PHONE'],
+            'remember_token' => bcrypt($data['remember_token']);
         ]);
     }
 

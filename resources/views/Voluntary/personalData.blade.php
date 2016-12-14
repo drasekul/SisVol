@@ -4,28 +4,25 @@
       <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
          <ul class="nav nav-sidebar">
-           <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
             <li>
-			<a href="datos_personales.html"><i class="fa fa-user fa-2x fa-fw"></i> Tarea Actual</a>
-             </li>
-			<li>
-             <a href="datos_personales.html"><i class="fa fa-book fa-2x fa-fw"></i> Solicitudes Tareas</a>
+			       <a href="/actualTask/index"><i class="fa fa-user fa-2x fa-fw"></i> Tarea Actual</a>
+            </li>
+			      <li>
+             <a href="/taskRequests/index"><i class="fa fa-book fa-2x fa-fw"></i> Solicitudes Tareas</a>
             </li>
             <li>
-            <a href="gestionar_reclamos.html"><i class="fa fa-book fa-2x fa-fw"></i>Gestion Habilidades</a>                          
+             <a href="/infoOnAbilities/index"><i class="fa fa-book fa-2x fa-fw"></i>Gestion Habilidades</a>
             </li>
-			<li>
-            <a href="gestionar_reclamos.html"><i class="fa fa-book fa-2x fa-fw"></i>Datos Personales</a>                          
-            </li>
-          </ul>
-            <div style="text-align:center;height:30px;margin: 10px">
-            <a href="#"><i class="fa fa-facebook fa-2x fa-fw"></i></a>
-                        <a href="#"><i class="fa fa-linkedin fa-2x fa-fw"></i></a>
-            <a href="#"><i class="fa fa-twitter fa-2x fa-fw"></i></a>
+            <li class="active"><a href="/personalData/index">Datos Personales <span class="sr-only">(current)</span></a></li>
+             </ul>
+              <div style="text-align:center;height:30px;margin: 10px">
+                <a href="#"><i class="fa fa-facebook fa-2x fa-fw"></i></a>
+                <a href="#"><i class="fa fa-linkedin fa-2x fa-fw"></i></a>
+                <a href="#"><i class="fa fa-twitter fa-2x fa-fw"></i></a>
                     </div>
                     <button type="button" class="btn btn-success btn-lg btn-block">Cerrar Sesión</button>
         </div>
-        <div class="col-sm-offset-3 col-sm-9 col-md-10 col-md-offset-2 main">          
+        <div class="col-sm-offset-3 col-sm-9 col-md-10 col-md-offset-2 main">
           <div class="panel panel-default">
                         <div class="panel-heading">
                             Datos Personales
@@ -35,7 +32,7 @@
                             <div class="table-responsive table-bordered">
                                 <table class="table">
                                      <tr>
-										
+
 										    <td style="width:10%"><b>Cuidad:</b></td>
 										   <td style="width:40%">
 										        <input class="form-control" type="text" >
@@ -46,7 +43,7 @@
                                             </td>
                                      </tr>
 									 <tr>
-										
+
 										    <td style="width:10%"><b>Residencia(Calle): </b></td>
 										   <td style="width:40%">
 										        <input class="form-control" type="text" >
@@ -55,10 +52,10 @@
 										   <td style="width:40%">
 										        <input class="form-control" type="text" >
                                             </td>
-											
+
                                      </tr>
 									 <tr>
-										
+
 										    <td style="width:10%"><b>Correo electronico: </b></td>
 										   <td style="width:40%">
 										        <input class="form-control" type="text" >
@@ -67,15 +64,15 @@
 										   <td style="width:40%">
 										        <input class="form-control" type="number" >
                                             </td>
-											
-                                     </tr>									 
+
+                                     </tr>
 									<tr>
 							  	    <div class="col-md-offset-3 col-md-6">
 										<div class="text-center">Disponibilidad: <input type="checkbox" checked data-toggle="toggle"></div>
-										
+
 								    </div>
 								    </tr>
-									<tr>										
+									<tr>
 										    <td style="width:10%"><b>Fecha: desde </b></td>
 										   <td style="width:40%">
 										        <input class="form-control" type="date" >
@@ -84,12 +81,12 @@
 										   <td style="width:40%">
 										        <input class="form-control" type="date" >
                                             </td>
-											
+
                                      </tr>
-									 
-									
-									
-								
+
+
+
+
                                 </table>
                             </div>
                             <!-- /.table-responsive -->
