@@ -79,7 +79,7 @@ class RegisterController extends Controller
             'RUT' => $data['RUT'],
             'EMAIL' => $data['EMAIL'],
             'PHONE' => $data['PHONE'],
-            'remember_token' => bcrypt($data['remember_token']);
+            //'remember_token' => bcrypt($data['remember_token'])
         ]);
     }
 
