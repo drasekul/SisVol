@@ -14,6 +14,7 @@
 Route::get('/', function () {
     return view('home');
 });
+Route::Auth('/login', 'LoginController@showLogin');
 Route::get('/test', 'TestController@index');
 Route::get('/home', 'HomeController@index');
 Route::get('/actualInfoMission/index','ActualInfoMission@index');
