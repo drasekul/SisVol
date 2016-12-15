@@ -20,6 +20,9 @@ Route::any('/login/index','Redirect@redir');
 Route::get('/test', 'TestController@index');
 Route::get('/home', 'HomeController@index');
 Route::any('/redirect','Redirect@register');
+Route::any('/Voluntario/index','Voluntario@index');
+Route::any('/Supervisor/index','Supervisor@index');
+Route::any('/Administrador/index','Administrador@index');
 Route::get('/actualInfoMission/index','ActualInfoMission@index');
 Route::get('/actualTask/index','ActualTask@index');
 Route::get('/addExtraVolunteers/index','AddExtraVolunteers@index');
@@ -34,4 +37,3 @@ Route::get('/taskAssignment/index','TaskAssignment@index');
 Route::get('/taskRequests/index','TaskRequests@index');
 Route::get('/taskStatus/index','TaskStatus@index');
 Route::get('/voluntaryRequestsChoice/index','VoluntaryRequestsChoice@index');
-
