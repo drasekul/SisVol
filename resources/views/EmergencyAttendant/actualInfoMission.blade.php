@@ -25,7 +25,7 @@
                     </div>
                     <button type="button" class="btn btn-success btn-lg btn-block">Cerrar Sesión</button>
         </div>
-        <div class="col-sm-offset-3 col-sm-9 col-md-10 col-md-offset-2 main">          
+        <div class="col-sm-offset-2 col-sm-9 col-md-10 col-md-offset-2 main">          
           <div class="panel panel-default">
                         <div class="panel-heading">
                             Información misión actual
@@ -63,9 +63,10 @@
 										    <td style="width:40%">
 										        <input class="form-control" type="text" name="txtLugar" readonly= "true">
                                             </td>										     
-											<td style="width:10%"><b>Puntaje Emergencia:</</b></td>
+											<td style="width:10%"><b>Cantidad actual voluntarios: </</b></td>
                                             <td style="width:40%">
-										        <input class="form-control" type="text" name="txtScoreEmergencia" readonly= "true">
+                                               <input type="number" name="txtCantActualVoluntarios" >
+                                               
                                             </td>
                                         </tr>
 										
@@ -81,22 +82,15 @@
                                             <td style="width:40%">
 										        <select class="form-control" name="ddlEstadoMision">
                                                     <option value="Sin valor">En proceso</option>
-                                                    <option value="Otro valor">Otro valor</option>
+                                                    <option value="Otro valor">Finaliada</option>
+                                                    <option value="Otro valor">Abandonada</option>
+
+
                                                 </select>
                                             </td>
+                                            
                                         </tr>
-										<tr>
-										
-										    <td style="width:10%"><b>Cantidad minima de voluntarios:</b></td>
-										    <td style="width:40%">
-										        <input class="form-control" name="txtCantMin" readonly= "true">
-                                            </td>										     
-											<td style="width:10%"><b>Cantidad actual voluntarios: </</b></td>
-                                            <td style="width:40%">
-										       <input type="number" name="txtCantActualVoluntarios" >
-											   
-                                            </td>
-                                        </tr>										
+																			
                                 </table>
                             </div>
 							<div class="col-sm-offset-5 main"> <INPUT button type="button" value="Actualizar" class="btn btn-primary btn-lg"></button></div>
