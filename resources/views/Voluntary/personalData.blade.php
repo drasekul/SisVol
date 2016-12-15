@@ -24,7 +24,7 @@
                     </div>
                     <button type="button" class="btn btn-success btn-lg btn-block">Cerrar Sesión</button>
         </div>
-        <div class="col-sm-offset-3 col-sm-9 col-md-10 col-md-offset-2 main">
+        <div class="col-sm-offset-1 col-sm-9 col-md-10 col-md-offset-2 main">
           <div class="panel panel-default">
                         <div class="panel-heading">
                             Datos Personales
@@ -64,7 +64,7 @@
                                             </td>
 											<td style="width:10%"><b>Ranking total: </b></td>
 										   <td style="width:40%">
-										        <input class="form-control" type="number" >
+										        <input class="form-control" type="text" readonly= "true">
                                             </td>
 
                                      </tr>
