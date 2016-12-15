@@ -31,11 +31,26 @@
                             <div class="table-responsive table-bordered">
                                 <table class="table">
                                 <tr>
-									                       <td>Comuna:</td>
-									                       <td><select class="form-control" name="ddlComuna">
+                                         <div class="col-xs-1">
+                                               <td>Comuna:</td>
+                                                           <td><select class="form-control" name="ddlComuna">
                                          <option value="comuna">Santiago</option>
                                          </select>
-                                 </td>									 
+                                         
+                                          </div>
+
+									      <div class="col-xs-1"> 
+                                           <INPUT button type="button" value="Buscar" class="btn btn-primary primary btn-lg">
+
+
+                                          </div>
+
+
+                                 </td>	
+
+
+
+
                                 </tr>
                                 
 						                        		<tr>
@@ -48,10 +63,7 @@
                                 
                                    
                                  <table class="table table-bordered">
-								                        <tr>
-								                          <INPUT button type="button" value="Agregar" class="btn btn-primary btn-lg">
-							                           	<INPUT button type="button" value="Borrar" class="btn btn-primary btn-lg">
-							                         </tr>
+								                        
 								    
                                     <tr>
 									    <th>Check</th>
@@ -105,7 +117,6 @@
 							 <tr>
 							 <div class="col-sm-offset-5 main"> 
 							 <INPUT button type="button" value="Registrar" class="btn btn-primary btn-lg"> 
-							 <INPUT button type="button" value="Restaurar" class="btn btn-primary btn-lg"></button>
 							 </div>
 							
 							 </tr>
