@@ -13,8 +13,8 @@ class DefineEmergency extends Controller
 	$provincias = DB::select('select P.ID_PROVINCE, P.NAME_PROVINCE from PROVINCE P ORDER BY P.NAME_PROVINCE;');
 	$comunas = DB::select('select C.ID_COMMUNE, C.NAME_COMMUNE from COMMUNE C ORDER BY C.NAME_COMMUNE;');
     	$result1 = [];
-	$result2 = [];
-	$result3 = [];
+	     $result2 = [];
+	      $result3 = [];
     	foreach ($regiones as $region) {
         	$result1[$region->ID_REGION] = $region->NAME_REGION;
 		//$result1[$region->ID_EMERGENCY] = $region->NAME_EMERGENCY;
