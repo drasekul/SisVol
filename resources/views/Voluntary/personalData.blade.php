@@ -4,16 +4,18 @@
       <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
          <ul class="nav nav-sidebar">
+            <li class="active"><a href="/personalData/index">Datos Personales <span class="r-only"></span></a></li>
+
+           <li>
+             <a href="/infoOnAbilities/index"><i class="fa fa-book fa-2x fa-fw"></i>Gestion Habilidades</a>
+            </li>
             <li>
 			       <a href="/actualTask/index"><i class="fa fa-user fa-2x fa-fw"></i> Tarea Actual</a>
             </li>
 			      <li>
              <a href="/taskRequests/index"><i class="fa fa-book fa-2x fa-fw"></i> Solicitudes Tareas</a>
             </li>
-            <li>
-             <a href="/infoOnAbilities/index"><i class="fa fa-book fa-2x fa-fw"></i>Gestion Habilidades</a>
-            </li>
-            <li class="active"><a href="/personalData/index">Datos Personales <span class="sr-only">(current)</span></a></li>
+           
              </ul>
               <div style="text-align:center;height:30px;margin: 10px">
                 <a href="#"><i class="fa fa-facebook fa-2x fa-fw"></i></a>
