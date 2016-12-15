@@ -4,10 +4,10 @@
       <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
+            <li class="active"><a href="/taskRequests/index">Solicitudes Tareas <span class="sr-only">(current)</span></a></li>
             <li>
 			<a href="/actualTask/index"><i class="fa fa-user fa-2x fa-fw"></i> Tarea Actual</a>
              </li>
-            <li class="active"><a href="/taskRequests/index">Solicitudes Tareas <span class="sr-only">(current)</span></a></li>
             <li>
             <a href="/infoOnAbilities/index"><i class="fa fa-book fa-2x fa-fw"></i>Gestion Habilidades</a>
             </li>
