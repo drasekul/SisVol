@@ -24,7 +24,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/redirect';
 
     /**
      * Create a new controller instance.
@@ -36,18 +36,8 @@ class LoginController extends Controller
         $this->middleware('guest', ['except' => 'logout']);
     }
 
-    public function username()
-    {
-        return 'USERNAME';
-    }
-
     public function showLogin(){
       return view('auth.login');
-    }
-
-    public function iniciar(REQUEST $request){
-      $user = App\USER::where('USERNAME', $request->USERNAME)->where('PASSWORD', $request->PASSWORD)->first;
-      Auth::login($user);
     }
 
 }
