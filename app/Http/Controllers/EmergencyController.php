@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use DB;
 use Illuminate\Http\Request;
 
-class DefineEmergency extends Controller
+class EmergencyController extends Controller
 {
     public function index(){
 	$regiones = DB::select('select R.ID_REGION, R.NAME_REGION from REGION R ORDER BY R.NAME_REGION;');
