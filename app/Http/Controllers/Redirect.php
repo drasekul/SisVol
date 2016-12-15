@@ -21,6 +21,10 @@ class Redirect extends Controller
 	$data=[];
 	$data2=[];
 	$data=DB::select('SELECT U.ID_USER,U.USERNAME,U.PASSWORD FROM USER U WHERE U.USERNAME='.$_POST["USERNAME"].' AND U.PASSWORD='.$_POST["PASSWORD"].';');
+	foreach ($data as $d) {
+		session(['id' => ''.$d->ID_USER]);
+		session(['user' => ''.$d->USERNAME]);
+    }
 	$data2=DB::select('SELECT r.ID_ROLE, r.NAME_ROLE 
 		FROM USER u
 		INNER JOIN USER_ROLE ur
@@ -56,7 +60,6 @@ class Redirect extends Controller
        	$i=$i+1;
     }
     return var_dump($data1);
-	
   }
 
 }

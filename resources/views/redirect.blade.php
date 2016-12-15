@@ -74,5 +74,7 @@
         @if (!empty($roles[2]))
             <a href=<?php echo '/'.$roles[2][1].'/index';?>><?php echo ''.$roles[2][1];?></a>
         @endif
+        <?php echo ''.session('id');?>
+        <?php echo ''.session('user');?>
     </body>
 </html>
