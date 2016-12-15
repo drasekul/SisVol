@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Auth;
 
 class Redirect extends Controller
 {
-  public function index(){	
+  public function register(){	
 	$data=[];
 	$ds=DB::select('SELECT U.`ID_USER` FROM `USER` U ORDER BY U.`ID_USER` DESC LIMIT 1 ');	
 	foreach ($ds as $d) {
@@ -28,8 +28,35 @@ class Redirect extends Controller
 		INNER JOIN ROLE r
 		ON r.ID_ROLE = ur.ID_ROLE
 		WHERE u.USERNAME='.$_POST["USERNAME"].';');
-	if(!empty($data)){return $data2;}
+	if(!empty($data)){
+		$roles=$data2;
+		if(empty($roles)){return 'ERROR';}
+	  	$data1=[];
+	  	$data2=[];
+	  	$i=0;  	
+		foreach ($roles as $rol) {
+	    	$data2[0] =$rol->ID_ROLE;
+	       	$data2[1] =$rol->NAME_ROLE;
+	       	$data1[$i] = $data2;
+	       	$i=$i+1;
+	    }
+	    return view('redirect',['roles'=>$data1]);
+	}
 	return redirect()->action('HomeController@index');
+  }
+  public function redir(array $roles){
+  	if(empty($roles)){return 'ERROR';}
+  	$data1=[];
+  	$data2=[];
+  	$i=0;  	
+	foreach ($roles as $rol) {
+    	$data2[0] =$rol->ID_ROLE;
+       	$data2[1] =$rol->NAME_ROLE;
+       	$data1[i] = $data2;
+       	$i=$i+1;
+    }
+    return var_dump($data1);
+	
   }
 
 }

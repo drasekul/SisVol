@@ -16,9 +16,10 @@ Route::get('/', function () {
 });
 Route::Auth('/login', 'LoginController@showLogin');
 Route::any('/login/redirect','Redirect@log');
+Route::any('/login/index','Redirect@redir');
 Route::get('/test', 'TestController@index');
 Route::get('/home', 'HomeController@index');
-Route::any('/redirect','Redirect@index');
+Route::any('/redirect','Redirect@register');
 Route::get('/actualInfoMission/index','ActualInfoMission@index');
 Route::get('/actualTask/index','ActualTask@index');
 Route::get('/addExtraVolunteers/index','AddExtraVolunteers@index');
