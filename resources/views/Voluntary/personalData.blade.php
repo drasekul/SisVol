@@ -4,16 +4,18 @@
       <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
          <ul class="nav nav-sidebar">
+            <li class="active"><a href="/personalData/index">Datos Personales <span class="r-only"></span></a></li>
+
+           <li>
+             <a href="/infoOnAbilities/index"><i class="fa fa-book fa-2x fa-fw"></i>Gestion Habilidades</a>
+            </li>
             <li>
 			       <a href="/actualTask/index"><i class="fa fa-user fa-2x fa-fw"></i> Tarea Actual</a>
             </li>
 			      <li>
              <a href="/taskRequests/index"><i class="fa fa-book fa-2x fa-fw"></i> Solicitudes Tareas</a>
             </li>
-            <li>
-             <a href="/infoOnAbilities/index"><i class="fa fa-book fa-2x fa-fw"></i>Gestion Habilidades</a>
-            </li>
-            <li class="active"><a href="/personalData/index">Datos Personales <span class="sr-only">(current)</span></a></li>
+           
              </ul>
               <div style="text-align:center;height:30px;margin: 10px">
                 <a href="#"><i class="fa fa-facebook fa-2x fa-fw"></i></a>
@@ -22,7 +24,7 @@
                     </div>
                     <button type="button" class="btn btn-success btn-lg btn-block">Cerrar Sesión</button>
         </div>
-        <div class="col-sm-offset-3 col-sm-9 col-md-10 col-md-offset-2 main">
+        <div class="col-sm-offset-1 col-sm-9 col-md-10 col-md-offset-2 main">
           <div class="panel panel-default">
                         <div class="panel-heading">
                             Datos Personales
@@ -62,7 +64,7 @@
                                             </td>
 											<td style="width:10%"><b>Ranking total: </b></td>
 										   <td style="width:40%">
-										        <input class="form-control" type="number" >
+										        <input class="form-control" type="text" readonly= "true">
                                             </td>
 
                                      </tr>

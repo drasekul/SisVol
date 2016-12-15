@@ -4,16 +4,11 @@
       <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
-            <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
-            <li>
-			<a href="datos_personales.html"><i class="fa fa-user fa-2x fa-fw"></i> Datos Personales</a>
-             </li>
+            <li class="active"><a href="/addMissions/index">Gestion Agregar Misiones <span class="sr-only">(current)</span></a></li>
+            
 			<li>
              <a href="/defineEmergency/index"><i class="fa fa-book fa-2x fa-fw"></i> Definir Emergencia</a>
-            </li>
-            <li>
-            <a href="/addMissions/index"><i class="fa fa-book fa-2x fa-fw"></i>Gestion Agregar Misiones</a>                          
-            </li>
+            </li>            
 			<li>
             <a href="/emergencyManagement/index"><i class="fa fa-book fa-2x fa-fw"></i>Gestion Emergencia</a>                          
             </li>
@@ -25,7 +20,7 @@
                     </div>
                     <button type="button" class="btn btn-success btn-lg btn-block">Cerrar Sesión</button>
         </div>
-        <div class="col-sm-offset-2 .col-sm-6  main">    
+        <div class="col-sm-offset-1 .col-sm-6  main">    
               <div style="height:25px"></div>		
                <div class="panel panel-default">
                         <div class="panel-heading">
@@ -36,11 +31,26 @@
                             <div class="table-responsive table-bordered">
                                 <table class="table">
                                 <tr>
-									                       <td>Comuna:</td>
-									                       <td><select class="form-control" name="ddlComuna">
+                                         <div class="col-xs-1">
+                                               <td>Comuna:</td>
+                                                           <td><select class="form-control" name="ddlComuna">
                                          <option value="comuna">Santiago</option>
                                          </select>
-                                 </td>									 
+                                         
+                                          </div>
+
+									      <div class="col-xs-1"> 
+                                           <INPUT button type="button" value="Buscar" class="btn btn-primary primary btn-lg">
+
+
+                                          </div>
+
+
+                                 </td>	
+
+
+
+
                                 </tr>
                                 
 						                        		<tr>
@@ -50,80 +60,63 @@
                                          </select>
                                  </td>
 			                          				</tr>
-                                 
-								                          <tr>
-								                          <td><b>Estado</b></td>
-                                       <td><select class="form-control" name="ddlEstado">
-                                            <option value="estado">Activa</option>
-                                                </select>
-                                   </td>
-                                   </tr>			
+                                
                                    
                                  <table class="table table-bordered">
-								                        <tr>
-								                          <INPUT button type="button" value="Agregar" class="btn btn-primary btn-lg">
-							                           	<INPUT button type="button" value="Borrar" class="btn btn-primary btn-lg">
-							                         </tr>
+								                        
 								    
                                     <tr>
-									                               <th>Check</th>
+									    <th>Check</th>
                                         <th>Nombre</th>
                                         <th>Fecha inicial</th>
                                         <th>Fecha final</th>
                                         <th>CapacidadMax</th>
                                         <th>CapacidadMix</th>
-                                        <th>Condicion</th>
-									                              	<th>Encargados Disponibles</th>
+									    <th>Encargados Disponibles</th>
 										
                                     </tr>
                                         <TD><INPUT type="checkbox" name="chk"/></TD>
-          <td>
-							 			  <div class="col-md-10">											
+                                      <td>
+							 			  <div class="col-md-20">											
 											<input class="form-control" type="text" >
 										  </div>
 										</td>
           
-           <td>	
-										   <div class="col-md-10">											
+                                       <td>	
+										   <div class="col-md-25">											
 											<input class="form-control" type="text" >
 										   </div>
 										</td>
                                         <td>
-										   <div class="col-md-10">											
+										   <div class="col-md-25">											
 											<input class="form-control" type="text" >
 										   </div>
 										</td>
                                         <td>
-										   <div class="col-md-7 pull-right">											
+										   <div class="col-md-10 pull-right">											
 											<input class="form-control" type="number" >
 									       </div>
 										</td>										
 										<td>
-										    <div class="col-md-7 pull-right">											
+										    <div class="col-md-10 pull-right">											
 										    	<input class="form-control" type="number" >
 										    </div>
-										</td>
-                                        <td>
-										   <div class="col-md-10">											
-											<input class="form-control" type="text" >
-										   </div>
-										</td>																				
+										</td>																		
 										<td>
 										   <div class="col-md-20">											
 											  <select class="form-control" name="ddlEncargado">
-                 <option value="comuna">Rodolf ElReno</option>
-                   </select>										  
+                                                 <option value="comuna">Rodolf ElReno</option>
+                                               </select>										  
 										    </div>
 										</td>	
 										
-         </table>
+                                   </table>
                                     
-        </table>
-        </div>
+                               </table>
+                           </div>
 							 <tr>
 							 <div class="col-sm-offset-5 main"> 
 							 <INPUT button type="button" value="Registrar" class="btn btn-primary btn-lg"> 
-							 <INPUT button type="button" value="Restaurar" class="btn btn-primary btn-lg"></button>
 							 </div>
 							
 							 </tr>

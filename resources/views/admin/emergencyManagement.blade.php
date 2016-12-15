@@ -6,17 +6,12 @@
       <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
-              <li>
-			<a href="datos_personales.html"><i class="fa fa-user fa-2x fa-fw"></i> Datos Personales</a>
-             </li>
+             <li class="active"><a href="/emergencyManagement/index">Gestion Emergencia <span class="sr-only">(current)</span></a></li>
 			<li>
              <a href="/defineEmergency/index"><i class="fa fa-book fa-2x fa-fw"></i> Definir Emergencia</a>
             </li>
             <li>
             <a href="/addMissions/index"><i class="fa fa-book fa-2x fa-fw"></i>Gestion Agregar Misiones</a>                          
-            </li>
-			<li>
-            <a href="/emergencyManagement/index"><i class="fa fa-book fa-2x fa-fw"></i>Gestion Emergencia</a>                          
             </li>
                       
           </ul>

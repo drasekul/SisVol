@@ -33,6 +33,7 @@ Route::get('/emergencyManagement/index','EmergencyManagement@index');
 Route::get('/emergencyManagement/index','EmergencyManagement@index');
 Route::get('/infoOnAbilities/index','InfoOnAbilities@index');
 Route::get('/personalData/index','PersonalData@index');
+Route::get('/requestStatus/index','RequestStatus@index');
 Route::get('/taskAssignment/index','TaskAssignment@index');
 Route::get('/taskRequests/index','TaskRequests@index');
 Route::get('/taskStatus/index','TaskStatus@index');

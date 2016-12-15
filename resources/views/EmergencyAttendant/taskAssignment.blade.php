@@ -4,24 +4,18 @@
       <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
            <ul class="nav nav-sidebar">
-           <li class="active"><a href="#">Overview <span class="sr-only">(current)</span></a></li>
-            <li>
-			<a href="datos_personales.html"><i class="fa fa-user fa-2x fa-fw"></i> Datos Personales</a>
-             </li>
+           <li class="active"><a href="/taskAssignment/index">Gestion Agregar Tareas <span class="sr-only">(current)</span></a></li>		
 			<li>
-             <a href="datos_personales.html"><i class="fa fa-book fa-2x fa-fw"></i> Información Misión Actual</a>
-            </li>
-            <li>
-            <a href="gestionar_reclamos.html"><i class="fa fa-book fa-2x fa-fw"></i>Gestion Agregar Tareas</a>                          
+            <a href="/voluntaryRequestsChoice/index"><i class="fa fa-user fa-2x fa-fw"></i>Solicitud de Voluntarios</a>                          
             </li>
 			<li>
-            <a href="gestionar_reclamos.html"><i class="fa fa-user fa-2x fa-fw"></i>Solicitud de Voluntarios</a>                          
+            <a href="/actualInfoMission/index"><i class="fa fa-user fa-2x fa-fw"></i>Información Misión Actual</a>                          
             </li>
 			<li>
-            <a href="gestionar_reclamos.html"><i class="fa fa-user fa-2x fa-fw"></i>Estado de Solicitudes</a>                          
+            <a href="/requestStatus/index"><i class="fa fa-book fa-2x fa-fw"></i>Estado de Solicitudes</a>                          
             </li>
-			<li>
-            <a href="gestionar_reclamos.html"><i class="fa fa-book fa-2x fa-fw"></i>Estado de Tareas</a>                          
+             <li>
+            <a href="/taskStatus/index"><i class="fa fa-book fa-2x fa-fw"></i>Estado de Tareas</a>                          
             </li>
           </ul>
             <div style="text-align:center;height:30px;margin: 10px">
@@ -34,7 +28,7 @@
         <div class="col-sm-offset-3 col-sm-9 col-md-10 col-md-offset-2 main">          
           <div class="panel panel-default">
                         <div class="panel-heading">
-                            Datos Personales
+                            Gestion Agregar Tareas 
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
