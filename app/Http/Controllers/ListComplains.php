@@ -7,3 +7,5 @@ use Illuminate\Http\Request;
 
 class AbilityController extends Controller
 {
+
+}
