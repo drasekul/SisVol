@@ -7,24 +7,23 @@
            <li class="active"><a href="#">HOME <span class="sr-only">(current)</span></a></li>
 		<li>
 		<a href="/taskAssignment/index"><i class="fa fa-user fa-2x fa-fw"></i>Gestion Agregar Tareas</a>
-		</li>		
+		</li>
             <li>
-            <a href="/voluntaryRequestsChoice/index"><i class="fa fa-user fa-2x fa-fw"></i>Solicitud de Voluntarios</a>                          
+            <a href="/voluntaryRequestsChoice/index"><i class="fa fa-user fa-2x fa-fw"></i>Solicitud de Voluntarios</a>
             </li>
 			<li>
-            <a href="/actualInfoMission/index"><i class="fa fa-user fa-2x fa-fw"></i>Información Misión Actual</a>                          
+            <a href="/showInfo"><i class="fa fa-user fa-2x fa-fw"></i>Mostrar información de misión actual</a>
             </li>
 			<li>
-            <a href="/requestStatus/index"><i class="fa fa-book fa-2x fa-fw"></i>Estado de Solicitudes</a>                          
+            <a href="/requestStatus/index"><i class="fa fa-book fa-2x fa-fw"></i>Estado de Solicitudes</a>
             </li>
              <li>
-            <a href="/taskStatus/index"><i class="fa fa-book fa-2x fa-fw"></i>Estado de Tareas</a>                          
+            <a href="/taskStatus/index"><i class="fa fa-book fa-2x fa-fw"></i>Estado de Tareas</a>
             </li>
           </ul>
             <div style="text-align:center;height:30px;margin: 10px">
-            <a href="#"><i class="fa fa-facebook fa-2x fa-fw"></i></a>
-                        <a href="#"><i class="fa fa-linkedin fa-2x fa-fw"></i></a>
-            <a href="#"><i class="fa fa-twitter fa-2x fa-fw"></i></a>
+            <a href="/personalData/index"><i class="fa fa-facebook fa-2x fa-fw"></i>Datos Personales</a>
+
                     </div>
                     <button type="button" class="btn btn-success btn-lg btn-block">Cerrar Sesión</button>
         </div>

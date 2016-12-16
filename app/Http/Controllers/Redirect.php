@@ -8,14 +8,15 @@ use Illuminate\Support\Facades\Auth;
 
 class Redirect extends Controller
 {
-  public function register(){	
+  public function register(){
 	$data=[];
-	$ds=DB::select('SELECT U.`ID_USER` FROM `USER` U ORDER BY U.`ID_USER` DESC LIMIT 1 ');	
+	$ds=DB::select('SELECT U.`ID_USER` FROM `USER` U ORDER BY U.`ID_USER` DESC LIMIT 1 ');
 	foreach ($ds as $d) {
         	$data[0] = $d->ID_USER;
     	}
 	DB::INSERT('INSERT IGNORE INTO `USER_ROLE` (`ID_USER_ROLE`, `ID_USER`, `ID_ROLE`) VALUES (NULL, "'.$data[0].'", 1);');
-    return Auth::logout();
+    Auth::logout();
+   return redirect()->action('HomeController@index');
   }
   public function log(){
 	$data=[];
@@ -25,7 +26,7 @@ class Redirect extends Controller
 		session(['id' => ''.$d->ID_USER]);
 		session(['user' => ''.$d->USERNAME]);
     }
-	$data2=DB::select('SELECT r.ID_ROLE, r.NAME_ROLE 
+	$data2=DB::select('SELECT r.ID_ROLE, r.NAME_ROLE
 		FROM USER u
 		INNER JOIN USER_ROLE ur
 		ON ur.ID_USER = u.ID_USER
@@ -37,7 +38,7 @@ class Redirect extends Controller
 		if(empty($roles)){return 'ERROR';}
 	  	$data1=[];
 	  	$data2=[];
-	  	$i=0;  	
+	  	$i=0;
 		foreach ($roles as $rol) {
 	    	$data2[0] =$rol->ID_ROLE;
 	       	$data2[1] =$rol->NAME_ROLE;
@@ -52,7 +53,7 @@ class Redirect extends Controller
   	if(empty($roles)){return 'ERROR';}
   	$data1=[];
   	$data2=[];
-  	$i=0;  	
+  	$i=0;
 	foreach ($roles as $rol) {
     	$data2[0] =$rol->ID_ROLE;
        	$data2[1] =$rol->NAME_ROLE;

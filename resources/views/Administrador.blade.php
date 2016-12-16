@@ -6,7 +6,7 @@
           <ul class="nav nav-sidebar">
             <li class="active"><a href="/Administrador/index"><i class="fa fa-user fa-2x fa-fw"></i>HOME <span class="sr-only">(current)</span></a></li>
             <li>
-			<a href="datos_personales.html"><i class="fa fa-user fa-2x fa-fw"></i> Datos Personales</a>
+			<a href="/personalData/index"><i class="fa fa-user fa-2x fa-fw"></i> Datos Personales</a>
              </li>
 			<li>
              <a href="/defineEmergency/index"><i class="fa fa-book fa-2x fa-fw"></i> Definir Emergencia</a>
@@ -15,7 +15,7 @@
             <a href="/addMissions/index"><i class="fa fa-book fa-2x fa-fw"></i>Gestion Agregar Misiones</a>
             </li>
 			<li>
-            <a href="/emergencyManagement/index"><i class="fa fa-book fa-2x fa-fw"></i>Gestion Emergencia</a>
+            <a href="/ranking"><i class="fa fa-book fa-2x fa-fw"></i>Ranking de voluntarios</a>
             </li>
           </ul>
             <div style="text-align:center;height:30px;margin: 10px">

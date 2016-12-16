@@ -45,7 +45,7 @@ class MisionController extends Controller{
   public function actualInfoMission(){
     $mytime = \Carbon\Carbon::now()->format('Y-m-d');
     //dd($mytime);
-    $datos = DB::select('select M.NAME_MISION, M.CONDITION_MISION from MISION M inner join USER_ROLE UR on M.ID_USER_ROLE = UR.ID_USER_ROLE where UR.ID_USER_ROLE = '.session('userRol').' and M.INITIALDATE_MISION <= "'.$mytime.'" limit 1;');
+    $datos = DB::select('select M.NAME_MISION, M.CONDITION_MISION from MISION M inner join USER_ROLE UR on M.ID_USER_ROLE = UR.ID_USER_ROLE where M.CONDITION_MISION=1 AND UR.ID_USER_ROLE = '.session('userRol').' and M.INITIALDATE_MISION <= "'.$mytime.'" limit 1;');
     dd($datos);
     //return view('EmergencyAttendant/actualInfoMission');
   }
@@ -74,12 +74,12 @@ class MisionController extends Controller{
     		}
 	}
 	$result1 = [];
-	$libres=DB::select('SELECT DISTINCT UR.`ID_USER_ROLE`, U.`USERNAME`
-	FROM `USER_ROLE` UR INNER JOIN `USER` U 
-	ON UR.`ID_USER`=U.`ID_USER`  
-	LEFT JOIN (SELECT M.`ID_USER_ROLE`,M.ID_MISION FROM `MISION` M WHERE CURRENT_DATE <= M.`FINALDATE_MISION` OR M.`FINALDATE_MISION` = NULL  AND CURRENT_DATE>=M.`INITIALDATE_MISION`) R 
-	ON R.`ID_USER_ROLE`=UR.`ID_USER_ROLE`
-	WHERE UR.`ID_ROLE`=2 AND R.ID_MISION IS NULL;');
+	$libres=DB::select('SELECT DISTINCT UR.ID_USER_ROLE, U.USERNAME
+	FROM USER_ROLE UR INNER JOIN USER U
+	ON UR.ID_USER=U.ID_USER
+	LEFT JOIN (SELECT M.ID_USER_ROLE,M.ID_MISION FROM `MISION` M WHERE CURRENT_DATE <= M.FINALDATE_MISION OR M.FINALDATE_MISION = NULL  AND CURRENT_DATE>=M.INITIALDATE_MISION AND M.CONDITION_MISION = 1) R
+	ON R.ID_USER_ROLE=UR.ID_USER_ROLE
+	WHERE UR.ID_ROLE=2 AND R.ID_MISION IS NULL;');
 	foreach ($libres as $libre) {
         	$result1[$libre->ID_USER_ROLE] = $libre->USERNAME;
     	}

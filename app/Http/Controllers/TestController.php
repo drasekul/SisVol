@@ -7,10 +7,8 @@ use Illuminate\Http\Request;
 
 class TestController extends Controller
 {
-  public function mostrarVoluntarios(){
+  public function index(){
 
-
-    dd($voluntarios);
     return view('test')->with('comunas', $test);
   }
 }

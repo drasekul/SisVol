@@ -18,15 +18,14 @@ class TaskController extends Controller
 
     }
     public function assign(){
-	$misions = DB::select('select C.ID_MISION, C.NAME_MISION from MISION C ORDER BY C.NAME_MISION;');
-
+	$misions = DB::select('select C.ID_MISION, C.NAME_MISION from MISION C where C.ID_USER_ROLE = ? ORDER BY C.NAME_MISION;',[session('UserRol')]);
 	$result3 = [];
 	foreach ($misions as $mision) {
         	$result3[$mision->ID_MISION] = $mision->NAME_MISION;
     	}
 	return view('EmergencyAttendant.taskAssignment',['misiones'=>$result3]);
     }
-	
+
   public function assignDB(){
 	DB::insert('INSERT INTO `TASK` (`ID_TASK`, `ID_MISION`, `NAME_TASK`, `STARTDATE_TASK`, `ENDDATE_TASK`, `CONDITION_TASK`) VALUES (NULL, "'.$_POST["mision"].'", "'.$_POST["name"].'", "'.$_POST["dateInit"].'", "'.$_POST["dateEnd"].'", "'.$_POST["estado"].'");');
     return 'SUCESS';
