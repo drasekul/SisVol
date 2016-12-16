@@ -40,28 +40,11 @@
 										    <td style="width:10%"><b>Mision Encargada:</b></td>
 										   <td style="width:40%">
 										        <input class="form-control" type="text" name="txtMisionEncargada" readonly= "true">
-                                            </td>
-										      <td style="width:10%"><b>Areas de desempeño:</</b></td>
-                                             <td style="width:40%">										        										
-												<select multiple class="form-control" id="areasDesempeño">
-														<option>1</option>
-														<option>2</option>
-														<option>3</option>
-														<option>4</option>
-														<option>5</option>
-												</select>
-													
+                                            </td>										
                                             </td>
                                         </tr>
 										<table class="table table-bordered">
-										<div class= "pull-right"> 
 										<tr>
-												<INPUT button type="button" value="Agregar" class="btn btn-primary btn-lg">
-												<INPUT button type="button" value="Borrar" class="btn btn-primary btn-lg">
-										</tr>
-										</div>
-										<tr>
-											<th style="width:5%">Check</th>
 											<th style="width:19%">Nombre</th>
 											<th style="width:19%">Fecha inicio</th>
 											<th style="width:19%">Fecha finalizada</th>
@@ -69,20 +52,19 @@
 											<th style="width:19%">Habilidades necesarias</th>
 										
 										</tr>
-											<TD><INPUT type="checkbox" name="chk"/></TD>
 											<td>
 											<div class="col-md-10">											
-												<input class="form-control" type="text"  readonly="true" >
+												<input class="form-control" type="text"   >
 										    </div>
 											</td>
 											<td>	
 										    <div class="col-md-10">											
-												<input class="form-control" type="text" readonly="true">
+												<input class="form-control" type="text" >
 										    </div>
 											</td>
 											<td>
 											<div class="col-md-10">											
-												<input class="form-control" type="text" readonly="true">
+												<input class="form-control" type="text" >
 											</div>
 										    </td>
 											
