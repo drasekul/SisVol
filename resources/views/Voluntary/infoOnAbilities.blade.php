@@ -25,84 +25,57 @@
         <div class="col-sm-offset-3 col-sm-9 col-md-10 col-md-offset-2 main">
           <div class="panel panel-default">
                         <div class="panel-heading">
-                            Datos Personales
+                            Gestion Habilidades
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
-						   <div class="table-responsive table-bordered">
+                      		  <div class="table-responsive table-bordered">
+                                <table class="table">
+                                     
+                                          <tr>
+										  <td style="width:10%" ><b>Areas de desempeño:</b></td>
+                                            <td style="width:40%">
+                                            	{{Form::select('area', $areas)}}
+                                            </td>
+                                      
+                                               <td>
+                                            <INPUT button type="button" value="Ver Habilidades" class="btn btn-primary btn-lg"></div>
+                                                    </td>
+                                        </tr>
+                                        <tr>
+										 <td style="width:10%" ><b>Habilidades:</b></td>
+                                            <td style="width:40%">
+                                            	{{Form::select('habilidad', $habilidades)}}
+                                            </td>
+                                    
+                                                <td>
+                                            <INPUT button type="button" value="Asignar Maestria" class="btn btn-danger btn-lg"></div>
 
-							 <div class="col-xs-offset-0 main">
-							 <INPUT button type="button" value="Area desempeño 1" class="btn btn-primary btn-lg"></button>
-							 <INPUT button type="button" value="Area desempeño 2" class="btn btn-primary btn-lg"></button>
-							 <INPUT button type="button" value="Area desempeño 3" class="btn btn-primary btn-lg"></button>
-							 <INPUT button type="button" value="Area desempeño 4" class="btn btn-primary btn-lg"></button>
-							 <INPUT button type="button" value="Area desempeño 5" class="btn btn-primary btn-lg"></button>
-
-							 </div>
-
-
-
-                            <table class="table table-bordered" style="width:100%">
-
-                                    <tr>
-									    <th style="width:20%">Habilidad</th>
-                                        <th style="width:13%">Maestria</th>
-                                        <th style="width:20%">Habilidad</th>
-                                        <th style="width:13%">Maestria</th>
-                                        <th style="width:20%">Habilidad</th>
-                                        <th style="width:13%">Maestria</th>
-                                    </tr>
-                                        <td>
-										  <div class="col-md-10">
-											<input class="form-control" type="text" readonly= "true">
-										  </div>
-										</td>
-										<td>
-										   <div class="col-md-20">
-											  <select class="form-control" name="ddlMaestria1">
-                                                  <option value="Maestria1">Nula "0"</option>
-                                                   </select>
-
-										    </div>
-										</td>
-                                        <td>
-										   <div class="col-md-10">
-											<input class="form-control" type="text" readonly= "true">
-										   </div>
-										</td>
-
-										<td>
-										   <div class="col-md-20">
-											  <select class="form-control" name="ddlMaestria2">
-                                                  <option value="Maestria2">Nula "0"</option>
-                                                   </select>
-
-										    </div>
-										</td>
-										<td>
-										   <div class="col-md-10">
-											<input class="form-control" type="text" readonly= "true" >
-										   </div>
-										</td>
-
-										<td>
-										   <div class="col-md-20">
-											  <select class="form-control" name="ddlMaestria3">
-                                                  <option value="Maestria3">Nula "0"</option>
-                                                   </select>
-
-										    </div>
-										</td>
-                            </table>
-
-                            </div>
-                            <!-- /.table-responsive -->
-							<div class="col-sm-offset-5 main"> <INPUT button type="button" value="Actualizar" class="btn btn-primary btn-lg"></div>
-                        </div>
-                        <!-- /.panel-body -->
+                                            </td>                   
+                                        </tr>
+                                       <tr>   
+									   <td style="width:10%" ><b>Maestria:</b></td>
+                                            <td style="width:40%">
+                                            	{{Form::select('maestria', $maestrias)}}
+                                            </td>
+										<tr>
+                                            <td style="width:10%" ><b>Maestria Actual:</b></td>
+                                            <td style="width:40%">{{Form::text('actual')}}</td>
+                                        </tr>                      
+                      
+                                        </tr>
+                    
+                    
+                   
+                                      
+                                </table>
+                         </div>
+                                                    <!-- /.table-responsive -->
+                        	<div class="col-sm-offset-5 main"> <INPUT button type="button" value="Actualizar" class="btn btn-primary btn-lg"></div>
+                      </div>
+                                        <!-- /.panel-body -->
 				</div>
         </div>
        </div>
      </div>
 @endsection
-
