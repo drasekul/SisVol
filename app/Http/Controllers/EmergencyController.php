@@ -28,9 +28,8 @@ class EmergencyController extends Controller
       	return view('admin/defineEmergency',['regiones'=>$result1,'provincias'=>$result2,'comunas'=>$result3]);
     	}
     public function regEmer(){
-//FALTA OBTENER EL USUARIO A TRAVES DE LA SESION
 //DESEABLE:VER LAS CONDICIONES DE BORDE
-	DB::INSERT('INSERT INTO EMERGENCY (`ID_EMERGENCY`, `ID_COMMUNE`, `ID_USER_ROLE`, `PLACE_EMERGENCY`, `NAME_EMERGENCY`, `DATEDECLARED_EMERGENCY`, `CONDITION_EMERGENCY`, `DESCRIPTION_EMERGENCY`, `PRIORITY_EMERGENCY`, `DATEFINISHED_EMERGENCY`) VALUES (NULL, "'.$_POST["comuna"].'", "1", "'.$_POST["geo"].'", "'.$_POST["name"].'", "'.$_POST["date"].'", "'.$_POST["estado"].'", "'.$_POST["descripcion"].'", "'.$_POST["prioridad"].'", NULL);');
+	DB::INSERT('INSERT INTO EMERGENCY (`ID_EMERGENCY`, `ID_COMMUNE`, `ID_USER_ROLE`, `PLACE_EMERGENCY`, `NAME_EMERGENCY`, `DATEDECLARED_EMERGENCY`, `CONDITION_EMERGENCY`, `DESCRIPTION_EMERGENCY`, `PRIORITY_EMERGENCY`, `DATEFINISHED_EMERGENCY`) VALUES (NULL, "'.$_POST["comuna"].'", "'.session('userRol').'", "'.$_POST["geo"].'", "'.$_POST["name"].'", "'.$_POST["date"].'", "'.$_POST["estado"].'", "'.$_POST["descripcion"].'", "'.$_POST["prioridad"].'", NULL);');
 	return "SUCCESS";
 	}
 

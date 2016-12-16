@@ -31,7 +31,7 @@
                                 <table class="table">
                                     <tbody>
 					{{ csrf_field() }}
-					{{ Form::open(array('action' => array('DefineEmergency@regEmer'))) }}
+					{{ Form::open(array('action' => array('EmergencyController@regEmer'))) }}
 					
 					
                                         <tr>

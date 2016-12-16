@@ -66,15 +66,19 @@
     </head>
     <body>
         @if (!empty($roles[0]))
+	<li>
             <a href=<?php echo '/'.$roles[0][1].'/index';?>><?php echo ''.$roles[0][1];?></a>
+	</li>
         @endif
         @if (!empty($roles[1]))
+	<li>
             <a href=<?php echo '/'.$roles[1][1].'/index';?>><?php echo ''.$roles[1][1];?></a>
+	</li>
         @endif
         @if (!empty($roles[2]))
+	<li>
             <a href=<?php echo '/'.$roles[2][1].'/index';?>><?php echo ''.$roles[2][1];?></a>
+	</li>
         @endif
-        <?php echo ''.session('id');?>
-        <?php echo ''.session('user');?>
     </body>
 </html>
