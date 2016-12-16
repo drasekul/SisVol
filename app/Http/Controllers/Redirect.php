@@ -14,13 +14,13 @@ class Redirect extends Controller
 	foreach ($ds as $d) {
         	$data[0] = $d->ID_USER;
     	}
-	DB::INSERT('INSERT IGNORE INTO `USER_ROLE` (`ID_USER_ROLE`, `ID_USER`, `ID_ROLE`) VALUES (NULL, '.$data[0].', 1);');
+	DB::INSERT('INSERT IGNORE INTO `USER_ROLE` (`ID_USER_ROLE`, `ID_USER`, `ID_ROLE`) VALUES (NULL, "'.$data[0].'", 1);');
     return Auth::logout();
   }
   public function log(){
 	$data=[];
 	$data2=[];
-	$data=DB::select('SELECT U.ID_USER,U.USERNAME,U.PASSWORD FROM USER U WHERE U.USERNAME='.$_POST["USERNAME"].' AND U.PASSWORD='.$_POST["PASSWORD"].';');
+	$data=DB::select('SELECT U.ID_USER,U.USERNAME,U.PASSWORD FROM USER U WHERE U.USERNAME="'.$_POST["USERNAME"].'" AND U.PASSWORD="'.$_POST["PASSWORD"].'";');
 	foreach ($data as $d) {
 		session(['id' => ''.$d->ID_USER]);
 		session(['user' => ''.$d->USERNAME]);
@@ -31,7 +31,7 @@ class Redirect extends Controller
 		ON ur.ID_USER = u.ID_USER
 		INNER JOIN ROLE r
 		ON r.ID_ROLE = ur.ID_ROLE
-		WHERE u.USERNAME='.$_POST["USERNAME"].';');
+		WHERE u.USERNAME="'.$_POST["USERNAME"].'";');
 	if(!empty($data)){
 		$roles=$data2;
 		if(empty($roles)){return 'ERROR';}
