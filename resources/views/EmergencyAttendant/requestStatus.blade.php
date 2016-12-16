@@ -46,21 +46,27 @@
                       
                       
                   </tr> 
+          
+          
                   <table class="table table-bordered">
+               <div class="col-sm-offset-5 main"> <INPUT button type="button" value="Buscar" class="btn btn-primary btn-lg"></button></div>
+
                                     <tr>
-                                        <th style="width:20%">Estado Solicitud</th>
-                                        <th style="width:20%">Nombre</th>
+                                        
+                                        <th style="width:20%">Nombre</th>                   
+                    <th style="width:20%">Estado Solicitud</th>
+                    <th style="width:20%">Estado</th>
                                         <th style="width:20%">Habilidades</th>
                                         <th style="width:20%">Maestria</th>
-                                        <th style="width:20%">Ubicación actual</th>
                                     </tr>
-                    <td>  
-                       <div class="col-md-20">                      
-                         <input class="form-control" type="text" readonly="true">
-                       </div>                   
-                    </td>
-                                            
-                    
+                         <td>
+                      <div class="col-md-20">                     
+                         <select class="form-control" name="ddlEstado">
+                                                  <option value="estado">Juan</option>
+                                                   </select>
+                      </div>
+                      </td>
+                    <td><div class="col-sm-offset-1 main"><INPUT button type="button" value="Ver" class="btn btn-primary btn-lg"></div></td>
                     <td>  
                        <div class="col-md-20">                      
                          <input class="form-control" type="text" readonly="true">
@@ -87,15 +93,9 @@
                     </select>
                     </td> 
                     
-                                        <td>
-                       <div class="col-md-20">                      
-                       <input class="form-control" type="text" readonly="true">
-                       </div>
-                    </td>
                                      </table>
                                 </table>
                             </div>
-              <div class="col-sm-offset-5 main"> <INPUT button type="button" value="Enviar" class="btn btn-primary btn-lg"></button></div>
                             <!-- /.table-responsive -->
                         </div>
                         <!-- /.panel-body -->
@@ -103,5 +103,4 @@
         </div>
       </div>
     </div>
- 
 @endsection
