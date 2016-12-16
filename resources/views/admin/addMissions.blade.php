@@ -66,7 +66,6 @@
 								                        
 								    
                                     <tr>
-									    <th>Check</th>
                                         <th>Nombre</th>
                                         <th>Fecha inicial</th>
                                         <th>Fecha final</th>
@@ -75,7 +74,6 @@
 									    <th>Encargados Disponibles</th>
 										
                                     </tr>
-                                        <TD><INPUT type="checkbox" name="chk"/></TD>
                                       <td>
 							 			  <div class="col-md-20">											
 											<input class="form-control" type="text" >
