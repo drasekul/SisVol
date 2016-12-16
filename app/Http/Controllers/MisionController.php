@@ -25,7 +25,7 @@ class MisionController extends Controller{
     foreach ($datos as $mision) {
       $misiones[$mision->ID_MISION] = $mision->NAME_MISION;
     }
-    return view('/TaskFromMision')->with('misiones', $misiones);
+    return view('TaskFromMision')->with('misiones', $misiones);
   }
 
 

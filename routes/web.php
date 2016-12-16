@@ -25,6 +25,7 @@ Route::any('/Supervisor/index','Supervisor@index');
 Route::any('/Administrador/index','Administrador@index');
 Route::get('/actualInfoMission','MisionController@ActualInfoMission');
 Route::get('/actualTask','TaskController@ActualTask');
+Route::get('/ranking','RankingController@showRankingUser');
 Route::get('/addExtraVolunteers/index','AddExtraVolunteers@index');
 Route::get('/addMissions/index','AddMissions@index');
 Route::any('/defineEmergency/index','EmergencyController@index');
