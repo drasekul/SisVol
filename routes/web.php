@@ -33,7 +33,7 @@ Route::any('/defineEmergency/index','EmergencyController@index');
 Route::post('/defineEmergency/regEmer','EmergencyController@regEmer');
 //Route::get('/emergencyManagement/index','EmergencyManagement@index');
 //Route::get('/emergencyManagement/index','EmergencyManagement@index');
-Route::get('/infoOnAbilities/index','AbilityController@index');
+Route::get('/infoOnAbilities','AbilityController@mostrar');
 Route::get('/personalData/index','UserController@mostrarInfo');
 //Route::get('/requestStatus/index','RequestStatus@index');
 Route::any('/taskAssignment/index','TaskController@assign');

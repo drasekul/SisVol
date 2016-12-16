@@ -9,7 +9,7 @@
              <a href="/taskRequests/index"><i class="fa fa-book fa-2x fa-fw"></i> Solicitudes Tareas</a>
             </li>
             <li>
-            <a href="/infoOnAbilities/index"><i class="fa fa-book fa-2x fa-fw"></i>Gestion Habilidades</a>
+            <a href="/infoOnAbilities"><i class="fa fa-book fa-2x fa-fw"></i>Gestion Habilidades</a>
             </li>
 			<li>
             <a href="/personalData/index"><i class="fa fa-book fa-2x fa-fw"></i>Datos Personales</a>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use DB;
 
 class AbilityController extends Controller
 {
@@ -12,7 +13,7 @@ class AbilityController extends Controller
       //$user = '1';
       $habilidades = DB::insert('insert p.MASTERY_ABILITY as mastery, a.NAME_ABILITY as name FROM POSESS p inner join USER_ROLE ur on (ur.ID_USER_ROLE = p.ID_USER_ROLE) inner join USER u on (ur.ID_USER_ROLE = u.ID_USER) inner join ABILITY a on (a.ID_ABILITY = p.ID_ABILITY) where u.USERNAME = ?;', [$user]);
       //Se deben obtener los datos desde la vista
-      $seleccion = $_POST[]; //Se considera que debe ser escrito el nombre de la habilidad a eeliminar
+      //$seleccion = $_POST[]; //Se considera que debe ser escrito el nombre de la habilidad a eeliminar
     }
     public function mostrar(){
       //Se muestran las habilidades de este usuario
