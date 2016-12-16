@@ -86,7 +86,7 @@ class MisionController extends Controller{
     return view('admin/addMissions',['disponibles'=>$result1,'emergencia'=> $result2,'comunas'=>$result3]);
   }
   public function addMisionsDB(){
-	DB::select('INSERT INTO `MISION` (`ID_MISION`, `ID_EMERGENCY`, `ID_USER_ROLE`, `ACTUALCAPACITY_MISION`, `MAXCAPACITY_MISION`, `NAME_MISION`, `INITIALDATE_MISION`, `FINALDATE_MISION`, `CONDITION_MISION`) VALUES (NULL, "'.$_POST["emergencias"].'", "'.$_POST["disponible"].'", "'.$_POST["min"].'", "'.$_POST["max"].'", "'.$_POST["name"].'", "'.$_POST["dateInit"].'", "'.$_POST["dateEnd"].'", "'.$_POST["estado"].'");');
+	DB::insert('INSERT INTO `MISION` (`ID_MISION`, `ID_EMERGENCY`, `ID_USER_ROLE`, `ACTUALCAPACITY_MISION`, `MAXCAPACITY_MISION`, `NAME_MISION`, `INITIALDATE_MISION`, `FINALDATE_MISION`, `CONDITION_MISION`) VALUES (NULL, "'.$_POST["emergencias"].'", "'.$_POST["disponible"].'", "'.$_POST["min"].'", "'.$_POST["max"].'", "'.$_POST["name"].'", "'.$_POST["dateInit"].'", "'.$_POST["dateEnd"].'", "'.$_POST["estado"].'");');
     return 'SUCESS';
   }
 

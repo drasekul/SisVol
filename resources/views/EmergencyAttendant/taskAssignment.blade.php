@@ -1,20 +1,22 @@
 @extends('layouts.dashboard')
 @section('content')
+
 <div class="container-fluid">
       <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
+          <ul class="nav nav-sidebar">
            <ul class="nav nav-sidebar">
-           <li class="active"><a href="/taskAssignment/index">Gestion Agregar Tareas <span class="sr-only">(current)</span></a></li>		
-			<li>
+            <li class="active"><a href="/requestStatus/index">Listado de Solicitudes <span class="sr-only">(current)</span></a></li>       
+            <li>
+            <a href="/taskAssignment/index"><i class="fa fa-book fa-2x fa-fw"></i>Gestion Agregar Tareas</a>                          
+            </li>
+            <li>
             <a href="/voluntaryRequestsChoice/index"><i class="fa fa-user fa-2x fa-fw"></i>Solicitud de Voluntarios</a>                          
             </li>
-			<li>
+            <li>
             <a href="/actualInfoMission/index"><i class="fa fa-user fa-2x fa-fw"></i>Información Misión Actual</a>                          
             </li>
-			<li>
-            <a href="/requestStatus/index"><i class="fa fa-book fa-2x fa-fw"></i>Estado de Solicitudes</a>                          
-            </li>
-             <li>
+            <li>
             <a href="/taskStatus/index"><i class="fa fa-book fa-2x fa-fw"></i>Estado de Tareas</a>                          
             </li>
           </ul>
@@ -28,70 +30,63 @@
         <div class="col-sm-offset-3 col-sm-9 col-md-10 col-md-offset-2 main">          
           <div class="panel panel-default">
                         <div class="panel-heading">
-                            Gestion Agregar Tareas 
+                            Listado de Solicitudes
                         </div>
                         <!-- /.panel-heading -->
                         <div class="panel-body">
                             <div class="table-responsive table-bordered">
                                 <table class="table">
-                                        
+                                        {{ Form::open(array('action' => array('TaskController@assignDB'))) }}
 										 <tr>
 										
 										    <td style="width:10%"><b>Mision Encargada:</b></td>
 										   <td style="width:40%">
-										        <input class="form-control" type="text" name="txtMisionEncargada" readonly= "true">
+										        {{Form::select('mision', $misiones)}}
                                             </td>										
                                             </td>
                                         </tr>
 										<table class="table table-bordered">
 										<tr>
-											<th style="width:19%">Nombre</th>
-											<th style="width:19%">Fecha inicio</th>
-											<th style="width:19%">Fecha finalizada</th>
-											<th style="width:19%">Estado</th>
-											<th style="width:19%">Habilidades necesarias</th>
-										
+											<th style="width:24%">Nombre</th>
+											<th style="width:24%">Fecha inicio</th>
+											<th style="width:24%">Fecha finalizada</th>
+											<th style="width:24%">Estado</th>
+			
+						
 										</tr>
 											<td>
 											<div class="col-md-10">											
-												<input class="form-control" type="text"   >
+												<input class="form-control" name="name" type="text"   >
 										    </div>
 											</td>
 											<td>	
 										    <div class="col-md-10">											
-												<input class="form-control" type="text" >
+												{{Form::date('dateInit', \Carbon\Carbon::now())}}
 										    </div>
 											</td>
 											<td>
 											<div class="col-md-10">											
-												<input class="form-control" type="text" >
+												{{Form::date('dateEnd', \Carbon\Carbon::now())}}
 											</div>
 										    </td>
 											
 											<td>
 											<div class="col-md-20">											
-											   <select class="form-control" name="ddlEstado">
-                                                  <option value="estado">En proceso</option>
-                                                   </select>
+											   {{Form::select('estado', array(
+						'1' => 'En Proceso',
+ 						'2' => 'Completado',
+ 						'3' => 'Abandonado',))}}
 											</div>
 											</td>
-											<td>										        										
-												<select multiple class="form-control" id="habilidadesNecesarias">
-														<option>1</option>
-														<option>2</option>
-														<option>3</option>
-														<option>4</option>
-														<option>5</option>
-												</select>
-													
-                                            </td>
-											
+										
 										</table>
 										
                                 </table>
                             </div>
+              {{Form::submit('Enviar',['class'=>"btn btn-primary primary btn-lg"])}}
+		{{ Form::close() }}
+
                             <!-- /.table-responsive -->
-							<div class="col-sm-offset-5 main"> <INPUT button type="button" value="Registrar" class="btn btn-primary btn-lg"></div>
                         </div>
                         <!-- /.panel-body -->
                     </div>
