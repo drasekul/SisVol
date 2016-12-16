@@ -17,5 +17,6 @@ class AdministradorController extends Controller
     }
 	  return view('Administrador');
   }
+  
 
 }

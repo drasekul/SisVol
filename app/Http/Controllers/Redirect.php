@@ -63,4 +63,9 @@ class Redirect extends Controller
     return var_dump($data1);
   }
 
+  public function logout(){
+    Auth::logout();
+    return redirect()->action('HomeController@index');
+  }
+
 }

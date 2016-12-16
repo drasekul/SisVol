@@ -4,12 +4,15 @@
       <div class="row">
         <div class="col-sm-3 col-md-2 sidebar">
           <ul class="nav nav-sidebar">
-           <li class="active"><a href="/actualTask/index">Tarea Actual<span class="sr-only">(current)</span></a></li>
+           <li class=""><a href="/actualTask">Tarea Actual<span class="sr-only">(current)</span></a></li>
 			      <li>
-             <a href="/taskRequests/index"><i class="fa fa-book fa-2x fa-fw"></i> Solicitudes Tareas</a>
+             <a href="/myTasks"><i class="fa fa-book fa-2x fa-fw"></i>Mis Tareas</a>
             </li>
             <li>
-            <a href="/infoOnAbilities"><i class="fa fa-book fa-2x fa-fw"></i>Gestion Habilidades</a>
+             <a href="/myRequests"><i class="fa fa-book fa-2x fa-fw"></i>Mis solicitudes</a>
+            </li>
+            <li>
+            <a href="/infoOnAbilities"><i class="fa fa-book fa-2x fa-fw"></i>Mis Habilidades</a>
             </li>
 			<li>
             <a href="/personalData/index"><i class="fa fa-book fa-2x fa-fw"></i>Datos Personales</a>
@@ -20,7 +23,8 @@
                         <a href="#"><i class="fa fa-linkedin fa-2x fa-fw"></i></a>
             <a href="#"><i class="fa fa-twitter fa-2x fa-fw"></i></a>
                     </div>
-                    <button type="button" class="btn btn-success btn-lg btn-block">Cerrar Sesión</button>
+                    <a href="/goodbye" class="btn btn-info" role="button">Cerrar Sesión</a>
+                    
         </div>
         <div class="col-sm-offset-2 .col-sm-6  main">
           <?php echo 'Bienvenido Voluntario '.session('user');?>

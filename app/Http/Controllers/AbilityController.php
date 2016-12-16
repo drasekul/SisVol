@@ -18,8 +18,9 @@ class AbilityController extends Controller
     public function mostrar(){
       //Se muestran las habilidades de este usuario
       $user = session('user');
-      //$user = '1';
-      $habilidades = DB::select('SELECT p.MASTERY_ABILITY as mastery, a.NAME_ABILITY as name FROM POSESS p inner join USER_ROLE ur on (ur.ID_USER_ROLE = p.ID_USER_ROLE) inner join USER u on (ur.ID_USER_ROLE = u.ID_USER) inner join ABILITY a on (a.ID_ABILITY = p.ID_ABILITY) where u.USERNAME = ? LIMIT 3;', [$user]);
+      //echo $user;
+      //$user = 'XYeeEEuO5O7';
+      $habilidades = DB::select('SELECT p.MASTERY_ABILITY as mastery, a.NAME_ABILITY as name FROM POSESS p inner join USER_ROLE ur on (ur.ID_USER_ROLE = p.ID_USER_ROLE) inner join USER u on (ur.ID_USER = u.ID_USER) inner join ABILITY a on (a.ID_ABILITY = p.ID_ABILITY) where u.USERNAME = ?;', [$user]);
       $talentos = collect();
       foreach ($habilidades as $habilidad) {
         $talento = [];

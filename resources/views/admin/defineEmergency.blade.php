@@ -6,10 +6,9 @@
           <ul class="nav nav-sidebar">
             <li class="active"><a href="/defineEmergency/index">Definir Emergencia <span class="sr-only">(current)</span></a></li>
             <li>
-            <a href="/addMissions/index"><i class="fa fa-book fa-2x fa-fw"></i>Gestion Agregar Misiones</a>                          
+            <a href="/addMissions/index"><i class="fa fa-book fa-2x fa-fw"></i>Gestion Agregar Misiones</a>
             </li>
-			<li>
-            <a href="/emergencyManagement/index"><i class="fa fa-book fa-2x fa-fw"></i>Gestion Emergencia</a>                          
+			<li>                         
             </li>
           </ul>
             <div style="text-align:center;height:30px;margin: 10px">
@@ -19,8 +18,8 @@
                     </div>
                     <button type="button" class="btn btn-success btn-lg btn-block">Cerrar Sesión</button>
         </div>
-        <div class="col-sm-offset-2 .col-sm-4  main">    
-              <div style="height:20px"></div>	       
+        <div class="col-sm-offset-2 .col-sm-4  main">
+              <div style="height:20px"></div>
           <div class="panel panel-default">
                         <div class="panel-heading">
                             Definir Emergencia
@@ -32,8 +31,8 @@
                                     <tbody>
 					{{ csrf_field() }}
 					{{ Form::open(array('action' => array('EmergencyController@regEmer'))) }}
-					
-					
+
+
                                         <tr>
                                             <td><b>Nombre designado:</b></td>
                                             <td>{{Form::text('name')}}</td>
@@ -110,13 +109,13 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
-    
+
     <!-- Bootstrap Core JavaScript -->
     <script src="C:\Users\Usuario\Desktop\MasterMind\SisVol\vendor\bootstrap\css\bootstrap.min.css"></script>
-	
+
     <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
     <script src="C:\Users\Usuario\Desktop\MasterMind\SisVol\js\holder.min.js"></script>
-	
+
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="C:\Users\Usuario\Desktop\MasterMind\SisVol\dist\js\ie-emulation-modes-warning.js"></script>
 @endsection

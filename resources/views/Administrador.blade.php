@@ -8,6 +8,9 @@
             <li>
 			<a href="/personalData/index"><i class="fa fa-user fa-2x fa-fw"></i> Datos Personales</a>
              </li>
+             <li>
+                     <a href="/requestsStatus"><i class="fa fa-book fa-2x fa-fw"></i> Ver Solicitudes</a>
+                    </li>
 			<li>
              <a href="/defineEmergency/index"><i class="fa fa-book fa-2x fa-fw"></i> Definir Emergencia</a>
             </li>
@@ -23,7 +26,8 @@
                         <a href="#"><i class="fa fa-linkedin fa-2x fa-fw"></i></a>
             <a href="#"><i class="fa fa-twitter fa-2x fa-fw"></i></a>
                     </div>
-                    <button type="button" class="btn btn-success btn-lg btn-block">Cerrar Sesión</button>
+                    <a href="/goodbye" class="btn btn-info" role="button">Cerrar Sesión</a>
+
         </div>
         <div class="col-sm-offset-3 col-sm-9 col-md-10 col-md-offset-2 main">
           <?php echo 'Bienvenido Administrador '.session('user');?>

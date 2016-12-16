@@ -9,13 +9,13 @@
 		<a href="/taskAssignment/index"><i class="fa fa-user fa-2x fa-fw"></i>Gestion Agregar Tareas</a>
 		</li>
             <li>
-            <a href="/voluntaryRequestsChoice/index"><i class="fa fa-user fa-2x fa-fw"></i>Solicitud de Voluntarios</a>
+
             </li>
 			<li>
             <a href="/showInfo"><i class="fa fa-user fa-2x fa-fw"></i>Mostrar información de misión actual</a>
             </li>
 			<li>
-            <a href="/requestStatus/index"><i class="fa fa-book fa-2x fa-fw"></i>Estado de Solicitudes</a>
+            <a href="/requestStatus"><i class="fa fa-book fa-2x fa-fw"></i>Estado de Solicitudes</a>
             </li>
              <li>
             <a href="/taskStatus/index"><i class="fa fa-book fa-2x fa-fw"></i>Estado de Tareas</a>
@@ -25,7 +25,8 @@
             <a href="/personalData/index"><i class="fa fa-facebook fa-2x fa-fw"></i>Datos Personales</a>
 
                     </div>
-                    <button type="button" class="btn btn-success btn-lg btn-block">Cerrar Sesión</button>
+                    <a href="/goodbye" class="btn btn-info" role="button">Cerrar Sesión</a>
+                    
         </div>
         <div class="col-sm-offset-3 col-sm-9 col-md-10 col-md-offset-2 main">
           <?php echo 'Bienvenido Supervisor '.session('user');?>
