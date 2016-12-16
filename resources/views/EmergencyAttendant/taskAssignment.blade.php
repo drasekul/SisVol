@@ -49,7 +49,6 @@
 											<th style="width:19%">Fecha inicio</th>
 											<th style="width:19%">Fecha finalizada</th>
 											<th style="width:19%">Estado</th>
-											<th style="width:19%">Habilidades necesarias</th>
 										
 										</tr>
 											<td>
@@ -75,16 +74,7 @@
                                                    </select>
 											</div>
 											</td>
-											<td>										        										
-												<select multiple class="form-control" id="habilidadesNecesarias">
-														<option>1</option>
-														<option>2</option>
-														<option>3</option>
-														<option>4</option>
-														<option>5</option>
-												</select>
-													
-                                            </td>
+										
 											
 										</table>
 										
