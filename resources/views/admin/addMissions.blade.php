@@ -31,33 +31,31 @@
                             <div class="table-responsive table-bordered">
                                 <table class="table">
                                 <tr>
+				{{ Form::open(array('action' => array('MisionController@addMisions'))) }}
                                          <div class="col-xs-1">
                                                <td>Comuna:</td>
-                                                           <td><select class="form-control" name="ddlComuna">
-                                         <option value="comuna">Santiago</option>
-                                         </select>
+						{{Form::select('comuna', $comunas)}}
+                                                           <td>
                                          
                                           </div>
 
 									      <div class="col-xs-1"> 
-                                           <INPUT button type="button" value="Buscar" class="btn btn-primary primary btn-lg">
-
+						{{Form::submit('Buscar',['class'=>"btn btn-primary primary btn-lg"])}}
 
                                           </div>
 
-
+					{{ Form::close() }}
                                  </td>	
 
 
 
 
                                 </tr>
-                                
+                                @if (!empty($emergencia))
+				{{ Form::open(array('action' => array('MisionController@addMisionsDB'))) }}
 						                        		<tr>
 						                    		    <td><b>Emergencia: </b></td>
-                                       <td><select class="form-control" name="ddlEmergencia">
-                                            <option value="emergencia">1010- Incendio Valparaiso</option>
-                                         </select>
+                                       <td>{{Form::select('emergencias', $emergencia)}}
                                  </td>
 			                          				</tr>
                                 
@@ -72,39 +70,46 @@
                                         <th>CapacidadMax</th>
                                         <th>CapacidadMix</th>
 									    <th>Encargados Disponibles</th>
+										<th>Estado</th>
 										
                                     </tr>
                                       <td>
 							 			  <div class="col-md-20">											
-											<input class="form-control" type="text" >
+											<input class="form-control" name="name" type="text" >
 										  </div>
 										</td>
           
                                        <td>	
 										   <div class="col-md-25">											
-											<input class="form-control" type="text" >
+											{{Form::date('dateInit', \Carbon\Carbon::now())}}
 										   </div>
 										</td>
                                         <td>
 										   <div class="col-md-25">											
-											<input class="form-control" type="text" >
+											{{Form::date('dateEnd', \Carbon\Carbon::now())}}
 										   </div>
 										</td>
                                         <td>
 										   <div class="col-md-10 pull-right">											
-											<input class="form-control" type="number" >
+											<input class="form-control" name="max" type="number" >
 									       </div>
 										</td>										
 										<td>
 										    <div class="col-md-10 pull-right">											
-										    	<input class="form-control" type="number" >
+										    	<input class="form-control" name="min" type="number" >
 										    </div>
 										</td>																		
 										<td>
 										   <div class="col-md-20">											
-											  <select class="form-control" name="ddlEncargado">
-                                                 <option value="comuna">Rodolf ElReno</option>
-                                               </select>										  
+											  {{Form::select('disponible', $disponibles)}}							  
+										    </div>
+										</td>	
+										<td>
+										   <div class="col-md-20">											
+											  {{Form::select('estado', array(
+						'1' => 'En Proceso',
+ 						'2' => 'Completado',
+ 						'3' => 'Abandonado',))}}
 										    </div>
 										</td>	
 										
@@ -114,12 +119,14 @@
                            </div>
 							 <tr>
 							 <div class="col-sm-offset-5 main"> 
-							 <INPUT button type="button" value="Registrar" class="btn btn-primary btn-lg"> 
+							 {{Form::submit('Registrar',['class'=>"btn btn-primary primary btn-lg"])}}
 							 </div>
 							
 							 </tr>
-							
+							{{ Form::close() }}
                             <!-- /.table-responsive -->
+				@endif
+
                         </div>
                         <!-- /.panel-body -->
                     </div>
