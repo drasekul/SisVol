@@ -35,10 +35,12 @@
                                 <table class="table">
                                      <tr>
 
-										    <td style="width:10%"><b>Cuidad:</b></td>
-										   <td style="width:40%">
-										        <input class="form-control" type="text" >
+
+                                            <td style="width:10%"><b>Correo electronico: </b></td>
+                                           <td style="width:40%">
+                                                <input class="form-control" type="text" >
                                             </td>
+										  
 										      <td style="width:10%"><b>Teléfono</b></td>
                                              <td style="width:40%">
 										        <input class="form-control" type="text" >
@@ -46,28 +48,18 @@
                                      </tr>
 									 <tr>
 
-										    <td style="width:10%"><b>Residencia(Calle): </b></td>
-										   <td style="width:40%">
-										        <input class="form-control" type="text" >
+										   <td style="width:10%"><b>Ranking total: </b></td>
+                                           <td style="width:40%">
+                                                <input class="form-control" type="text" readonly= "true">
                                             </td>
+                                            
 											<td style="width:10%"><b>Contraseña: </b></td>
 										   <td style="width:40%">
 										        <input class="form-control" type="text" >
                                             </td>
 
                                      </tr>
-									 <tr>
-
-										    <td style="width:10%"><b>Correo electronico: </b></td>
-										   <td style="width:40%">
-										        <input class="form-control" type="text" >
-                                            </td>
-											<td style="width:10%"><b>Ranking total: </b></td>
-										   <td style="width:40%">
-										        <input class="form-control" type="text" readonly= "true">
-                                            </td>
-
-                                     </tr>
+									 
 									<tr>
 							  	    <div class="col-md-offset-3 col-md-6">
 										<div class="text-center">Disponibilidad: <input type="checkbox" checked data-toggle="toggle"></div>
